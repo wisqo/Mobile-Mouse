@@ -1,10 +1,4 @@
 # Exploit Title: Mobile Mouse 3.6.0.4 Remote Code Execution 
-# Date: Jan 5, 2024
-# Exploit Author: Abbas Roda
-# Vendor Homepage: https://mobilemouse.com/
-# Software Link: https://www.mobilemouse.com/downloads/setup.exe
-# Version: 3.6.0.4
-# Tested on: Windows 10 Enterprise LTSC Build 17763
 
 #!/usr/bin/env python3
 
